@@ -40,7 +40,7 @@ THEN the password is either displayed in an alert or written to the page
 
 The following image demonstrates the web application's appearance and functionality:
 
-![](assets/images/final%20webpage.png) 
+![](assets/images/readme-screenshoot-pwg.png) 
 
 ## Review
 
