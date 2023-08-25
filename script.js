@@ -1,6 +1,10 @@
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+
 // Assignment code here
 // creating passwords variables in four arrays:
 //lower case alphabet
+
 var lowerCase = [
   "a",
   "b",
@@ -78,32 +82,71 @@ var number = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
 
 
-
-
-
-
-
-
-
   // confirm with user on their optional choices in characters.
-  var lowerCase = confirm(
+  function generatePassword() {
+  var password = '';
+  var allchar = '';
+
+
+  var confirmlowerCase = confirm(
     "Add a lowercase character to generated password?"
   );
 
-  var upperCase = confirm(
+  var confirmupperCase = confirm(
     "Add an uppercase character to generated password?"
   );
 
-  var number = confirm(
+  var confirmnumber = confirm(
     "Add a number character to generated password?"
   );
 
-  var symbol = confirm(
+  var confirmsymbol = confirm(
     "Add an symbol character to generated password?"
   );
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+  if (
+    confirmlowerCase === false &&
+    confirmupperCase === false &&
+    confirmsymbol === false &&
+    confirmnumber=== false
+  ) {
+    alert("Pick a Character Type!");
+    return generatePassword();
+  }
+
+  if (confirmlowerCase) {
+    allchar = allchar.concat(lowerCase);
+  }
+  if (confirmupperCase) {
+    allchar = allchar.concat(upperCase);
+  }
+  if (confirmnumber) {
+    allchar = allchar.concat(number);
+  }
+  if (confirmsymbol) {
+    allchar = allchar.concat(symbol);
+  }
+
+
+ 
+  var length = parseInt(
+    window.prompt("Choose between 8 and 128 characters"));
+  
+  if (isNaN(length) || (Length < 8 || Length > 128)) {
+    alert("Invalid number")
+    return null;
+  }
+
+
+  for (var i = 0; i < length; i++) {
+    password =
+      password + allchar[Math.floor(Math.random() * allchar.length)];
+  }
+  console.log(password);
+  return password;
+}
+
+
 
 // Write password to the #password input
 function writePassword() {
@@ -112,6 +155,13 @@ function writePassword() {
 
   passwordText.value = password;
 }
+
+
+
+
+
+  
+  
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
