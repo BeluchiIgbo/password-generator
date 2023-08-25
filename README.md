@@ -53,4 +53,7 @@ Applicaiton loads with no errors.
 Repositiory contains a quality README file with description, screenshot, and link to deployed application.
 
 ## Source
-
+https://dev.to/code_mystery/random-password-generator-using-javascript-6a
+https://www.youtube.com/watch?v=duNmhKgtcsI
+https://www.studytonight.com/post/building-a-password-generator-with-javascript
+https://www.w3schools.com/js/js_arrays.asp
