@@ -10,7 +10,7 @@
 
 *  It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
   
-* URL: 
+* URL: https://beluchiigbo.github.io/password-generator/
 
 ## User Story
 ```
